@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Document</title>
+        <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-barra">
+        <div class="barra">
+            <nav class="navegacion">
+                <a href="formulario2.html">Gastos Fijos</a>
+            </nav>
+        </div>
+        <h1>Materia Prima</h1>
+        
+    </div>
+    <div class="bg-amarillo contenedor sombra">
+        <form id="materia"  method="POST" action="logica/guardar.php" name="materia">
+            <Legend>Ingrese el producto <span>Todos los campos son obligatorios</span> </Legend>
+            <div class="campos">
+                <div class="campo">
+                    <label for="nombre">Ingrediente:</label>
+                    <input name="nombre" type="text" placeholder="Ingrese la materia" id="nombre">
+                </div>
+                <div class="campo">
+                    <label for="opciones">Unidad:</label>
+                    <select name="opciones" id="opciones">
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="KG">KG</option>
+                        <option value="Litro">Litro</option>
+                        <option value="Pieza">Pieza</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="cantidad">Cantidad:</label>
+                    <input name="cantidad" type="number" id="cantidad" >
+                </div>
+                <div class="campo">
+                    <label for="costo">Costo:</label>
+                    <input name="costo" type="number" id="costo"  >
+                </div>
+                <div class="campo">
+                    <label for="total">Total:</label>
+                    <input name="total" type="text"id="total"  >
+                </div>
+               
+            </div>
+            <div class="campo enviar">
+                <button type="submit"> Enviar</button>
+            </div>
+        </form>
+        <div>
+        </div>
+   </div>
+   
+    <div class="bg-amarillo contenedor sombra registros">
+        <div class="contenedor-materias">
+            <h2>Costos</h2>
+            
+
+            <div class="contenedor-tabla">
+                <table id="listado-costos" class="listado-costos">
+                    <thead>
+                        <tr> 
+                            <th>Ingrediente</th>
+                            <th>Unidad</th>
+                            <th>Cantidad</th>
+                            <th>Costo</th>
+                            <th>Total</th>
+                        </tr>
+
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <div class="totales">
+                    <label for="T">Total:</label>
+                    <input type="text" name="" id="Totales">
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+<script type="text/javascript" src="javascript/form.js"></script>
+   
+</html>
